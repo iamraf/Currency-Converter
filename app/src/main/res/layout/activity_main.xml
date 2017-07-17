@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kappa.currencyconverter.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/image"/>
+
+    <EditText
+        android:id="@+id/euroTextbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/euroButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:ems="10"
+        android:hint="Convert from Euro"
+        android:inputType="textPersonName|number"/>
+
+    <Button
+        android:id="@+id/euroButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:onClick="fromEuroToDollar"
+        android:text="€ to $"/>
+
+    <EditText
+        android:id="@+id/dollarTextbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/euroTextbox"
+        android:layout_alignStart="@+id/euroTextbox"
+        android:layout_below="@+id/euroTextbox"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="Convert from Dollar"
+        android:inputType="textPersonName|number"/>
+
+    <Button
+        android:id="@+id/dollarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dollarTextbox"
+        android:layout_alignLeft="@+id/euroButton"
+        android:layout_alignStart="@+id/euroButton"
+        android:onClick="fromDollarToEuro"
+        android:text="$ to €"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dollarTextbox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Current Rates:"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        app:srcCompat="@drawable/eu"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_below="@+id/imageView3"
+        app:srcCompat="@drawable/us"/>
+
+    <TextView
+        android:id="@+id/euroTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView4"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@+id/imageView4"
+        android:layout_toRightOf="@+id/imageView4"
+        android:text="1 EUR = 1.14 USD"/>
+
+    <TextView
+        android:id="@+id/dollarTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignLeft="@+id/euroTextview"
+        android:layout_alignStart="@+id/euroTextview"
+        android:layout_marginBottom="6dp"
+        android:text="1 USD = 0.88 EUR"/>
+
+</RelativeLayout>
